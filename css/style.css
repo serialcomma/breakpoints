@@ -1,0 +1,128 @@
+/* Style sheet for the breakpoints web page
+   Uses BEM methodology (or tries to) - en.bem.info
+   Copyright (c) Serial Comma LLC. Distributed under an MIT license. */
+
+/* *********************************************
+ * reset (outside BEM best practice
+ * but it seems to help)
+ * *********************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.page {
+  /* placeholder */
+}
+
+/* *********************************************
+ * header styles
+ * *********************************************/
+
+.page__header {
+  margin: 0 0 0.75rem;
+}
+
+.header {
+  padding: 1.25rem 0.5rem;
+  background: #9b52ff;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.header__title {
+  margin: 0;
+  padding: 0;
+}
+
+/* *********************************************
+ * main body styles
+ * *********************************************/
+
+/* small screen (default for mobile first) *****/
+
+.main {
+  background: white; /* white or off-white (#f4f4f4) */
+  font-family: 'Gelasio', serif;
+  font-size: 1.125em; /* default for mobile screen */
+  line-height: 1.4;
+}
+
+.text-box {
+  background-color: red;
+  color: white;
+  padding: 0 0.5rem;
+}
+
+.text-box__para {
+  /*font-size: 100%;*/
+  padding: 0 0 0.5em 0; /* space below */
+}
+
+/* tablet screen *******************************/
+
+@media screen and (min-width: 480px) {
+  .main {
+    font-size: 1.3em; /* larger than the default for a larger screen */
+  }
+
+  .text-box {
+    background-color: green;
+  }
+}
+
+/* laptop (and iPad Pro) / desktop screen ******/
+
+@media screen and (min-width: 800px) {
+  .page {
+    max-width: 50rem; /* keep a manageable width */
+    padding: 0rem 1rem 1rem 1rem; /* ensures content doesn't run flush to the edges of the viewport */
+    margin: 0 auto; /* centers the entire page horizontally */
+  }
+
+  .text-box {
+    background-color: blue;
+  }
+}
+
+/* *********************************************
+ * footer styles
+ * *********************************************/
+
+.footer {
+  margin: 0.75rem 0;
+  background: #161616;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.footer__copr {
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.footer__para {
+  padding: 0;
+}
+
+.footer__link {
+  text-decoration: none; /* remove underline from links */
+  color: red;
+}
+
+.footer__link:visited {
+  color: #be95ff;
+}
+
+.footer__link:hover {
+  color: #42be65;
+}
